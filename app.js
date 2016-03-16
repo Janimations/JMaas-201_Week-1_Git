@@ -19,7 +19,7 @@ var _06_register   = document.getElementById('_06_register');
 
 //01 Where - Route:
 var climbingRoute = prompt('Which Mountain are you planning to climb? Mt.StHellens, Mt.Hood or Mt.Rainier?');
-console.log('Sweet! You are going to climbing' + climbingRoute + '! Good choice.');
+console.log('Sweet! You are going to climb ' + climbingRoute + '!  Good choice.');
 _01_route.textContent = 'Sweet! You are going to climbing' + climbingRoute + '! Good choice.';
 
                         // add more text and options that differentiate between StHellens, Hood and Rainer
@@ -31,12 +31,12 @@ _02_who.textContent = 'Great, so You are climbing with ' + climbingPartner + '.'
 
 // Confirm experience
 confirm('Is' + climbingPartner + ' experienced?');
-console.log(climbingPartner + "is experienced.");
+console.log(climbingPartner + " is experienced.");
 
 //03 Conditions
 var checkConditions = prompt('Did You check Weather and Avalanche forecast?');
 
-if (checkConditions.toLowerCase() === 'n' || checkConditions.toLowerCase() === 'NO') {
+if (checkConditions.toLowerCase() === 'n' || checkConditions.toLowerCase() === 'no') {
     _03_conditions.textContent = "You didn't !? STOP right there, go check the conditions and start again!";
     console.log("You didn't !? STOP right there, go check the conditions and start again!");
 } else {
@@ -48,18 +48,18 @@ if (checkConditions.toLowerCase() === 'n' || checkConditions.toLowerCase() === '
 //04 Research
 var researchRoute = prompt('Do you know your Route and can navigate it safely?');
 
-if (researchRoute.toLowerCase() === 'n' || researchRoute.toLowerCase() === 'NO') {
+if (researchRoute.toLowerCase() === 'n' || researchRoute.toLowerCase() === 'no') {
     _04_research.textContent = "You didn't !? STOP right there, get a map, compass and GPS and start again!";
     console.log("You didn't !? STOP right there, get a map, compass and GPS and start again!");
 } else {
-    _04_research.textContent = 'Your answer is ' + researchRoute + ' Good, be safe out there!';
-    console.log('Your answer is ' + researchRoute + ' Good, be safe out there!');
+    _04_research.textContent = 'Your answer is ' + researchRoute + '.  --- Good, be safe out there!';
+    console.log('Your answer is ' + researchRoute + '. --- Good, be safe out there!');
 };
 
 //05 Gear
 var checkGear = prompt('Do you have all the 10 Essentials?');
 
-if (checkGear.toLowerCase() === 'n' || checkGear.toLowerCase() === 'NO') {
+if (checkGear.toLowerCase() === 'n' || checkGear.toLowerCase() === 'no') {
     _05_gear.textContent = "You didn't !? STOP right there, get a map, compass and GPS and start again!";
     console.log("You didn't !? STOP right there, get a map, compass and GPS and start again!");
 } else {
