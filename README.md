@@ -1,4 +1,4 @@
-# JMaas-201_Week-1_Git
+# README for Repo JMaas-201_Week-1_Git
 Codefellows 201 Week-1 projects
 
 Git branch structure:
