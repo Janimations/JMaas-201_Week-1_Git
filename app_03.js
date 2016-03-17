@@ -12,6 +12,9 @@ var question_3 = document.getElementById('question_3');
 var question_4 = document.getElementById('question_4');
 var question_5 = document.getElementById('question_5');
 
+var correctTotal = 0;                       // counter variable for total right answers
+
+
 // Question 00:  Introduction and Name
 
 var userName = prompt('Welcome to the PINGU PROFILE page! Have a look around - when You are ready to take the Quiz enter Your name to start:');
@@ -40,6 +43,7 @@ while (keepAsking_01) {
     alert('Yes! Pingu was made using traditional Stop-Motion!');
     question_1.textContent = 'Yes! Pingu was made using traditional Stop-Motion!';
     keepAsking_01 = false;
+    correctTotal ++;
 
     } else {
     alert("Sorry, I didn't understand your answer. Please try again and only one word:");
@@ -59,6 +63,7 @@ while (keepAsking_02) {
     alert('YES! That is correct. Penguins are only found at the South-Pole.');
     question_2.textContent = 'YES! That is correct. Penguins are only found at the South-Pole.';
     keepAsking_02 = false;
+    correctTotal ++;
 
 } else if (userResponse.toUpperCase() === 'Y' ||         userResponse.toUpperCase() === 'YES') {
     alert('No! Penguins only live at the South-Pole!');
@@ -88,6 +93,7 @@ while (keepAsking_03) {
     alert('Yes ! That is Correct!');
     question_3.textContent = 'Yes ! That is Correct!';
     keepAsking_03 = false;
+    correctTotal ++;
 
     } else {
     alert("Sorry, I didn't understand your answer. Please try again and only type 'Yes' or 'No':");
@@ -109,6 +115,7 @@ while (keepAsking_04 && guess < 6) {
     alert('Well Done! You Guessed right!')
     question_4.textContent = 'Yes! Pingu is 5 years old.';
     keepAsking_04 = false;
+    correctTotal ++;
     } else if (userResponse < 5 && userResponse !== NaN) {
     alert('No he is older than that, and he already goes to school. Try again:');
     guess += 1;
@@ -137,7 +144,12 @@ while (keepAsking_05) {                                             // while-loo
 
     var userResponse = prompt("Name as many of Pingu's family members as you can, separated by a comma:");
     console.log('userResponse: ' + userResponse);
-    var userResponse = userResponse.split(", ");                        // turns userResponse into an Array
+
+    if (typeof userResponse === 'string') {                         // if userResponse is a string, turns userResponse into an Array
+        var userResponse = userResponse.split(", ");
+    } else {
+        alert('Hey - NO NUMBERS - enter family members like "Mother" or "Pingu" only:');
+    };
 
     for (var i = 0; i < userResponse.length; i++) {                    // loops through userResponse-Array
 
@@ -146,12 +158,26 @@ while (keepAsking_05) {                                             // while-loo
         }
         } else if (userResponse !== 'string') {                         // error msg if input is not a string
             console.log('---- user input NOT A STRING ----');
-            alert('Hey - NO NUMBERS - enter family members like "Mother" or "Pingu" only:')
+            alert('Hey - NO NUMBERS - enter family members like "Mother" or "Pingu" only:');
         } else {
 
         };  // close if
     };   // close for-loop
 };    // close while-loop
+
+if (guessfamily.length > 4) {                                // checks amount of correct answers and if guessed all prints special msg.
+    question_5.textContent = "Awesome! You guessed all of Pingu's family members!!!" + guessfamily;   // Improve: printing the guessfamily-Array nicely...
+    console.log('---- user guessed ALL ----');
+} else {
+    question_5.textContent = "You guessed " + guessfamily.length + " of Pingu's family members correctly." + guessfamily;
+    console.log('---- guessed ' + guessfamily.length + ' answers correctly ----');
+};
+
+
+// Final Score Feedback:
+
+alert('Congratulations! You answered ' + correctTotal + ' out of 5 questions correctly! Well done!')
+console.log('Total correct answers: ' + correctTotal + ' out of 5');
 
 
 };   // window.onload function (above) closing brackets
