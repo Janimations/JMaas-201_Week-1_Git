@@ -60,7 +60,7 @@ while (keepAsking_02) {
     question_2.textContent = 'YES! That is correct. Penguins are only found at the South-Pole.';
     keepAsking_02 = false;
 
-} else if (userResponse.toUpperCase() === 'Y' || userResponse.toUpperCase() === 'YES') {
+} else if (userResponse.toUpperCase() === 'Y' ||         userResponse.toUpperCase() === 'YES') {
     alert('No! Penguins only live at the South-Pole!');
     question_2.textContent = 'No! Penguins only live at the South-Pole!';
     keepAsking_02 = false;
@@ -95,10 +95,50 @@ while (keepAsking_03) {
     };
 };
 
-// Question 04:
+// Question 04: How old is Pingu?
+// Numeric input, too-high too-low + limit to 5 guesses:
 
-// Questijo 05:
+var keepAsking_04 = true;
+var guess = 0;
 
+while (keepAsking_04 && guess < 6) {
+    var userResponse = prompt('Take a guess: How old is Pingu?');
+    console.log('userResponse: ' + userResponse);
+
+    if (userResponse === 5) {
+    alert('Well Done! You Guessed right!')
+    question_4.textContent = 'Yes! Pingu is 5 years old.';
+    keepAsking_04 = false;
+    } else if (userResponse < 5 && userResponse !== NaN) {
+    alert('No he is older than that, and he already goes to school. Try again:');
+    guess += 1;
+    } else if  (userResponse > 5 && userResponse !== NaN) {
+    alert("No, that's too old. Try again:");
+    guess += 1;
+    } else {
+    alert("Sorry, I didn't understand your answer. Please try again and only type a number:");
+    console.log("---- User Input error -----");
+    };
+};
+
+if (guesses == 5;) {
+    alert('Sorry You are out of guesses! Next question:')
+    question_4.textContent = '???';
+    console.log('---- No right answer after 5 guesses ----')
+};
+
+
+// Question 05:
+
+var family = ["father", "mother", "pingu", "pinga", "grandfather"]  // possible correct answers
+var guessfamily = [];                                               // user input of correct answers
+
+var i;
+for (i in family) {
+    if (i === userResponse.toLowerCase()) {
+
+    }
+}
 
 
 
