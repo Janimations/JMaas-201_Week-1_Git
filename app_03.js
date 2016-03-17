@@ -2,7 +2,8 @@
 // JMaas Week1-day-3 Wednesday Lab Assignment:
 
 // this function ensures that the html-page is fully loaded before the pop-up windows start:
-//window.onload() = function() {
+
+window.onload() = function() {
 
 // declare variables for textContent-functions below:
 var question_1 = document.getElementById('question_1');
@@ -101,4 +102,4 @@ while (keepAsking_03) {
 
 
 
-//};   // window.onload function (above) closing brackets
+};   // window.onload function (above) closing brackets
