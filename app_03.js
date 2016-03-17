@@ -128,18 +128,27 @@ if (guesses == 5;) {
 };
 
 
-// Question 05:
+// Question 05:  // multiple correct answers from Array
 
-var family = ["father", "mother", "pingu", "pinga", "grandfather"]  // possible correct answers
-var guessfamily = [];                                               // user input of correct answers
+var family = ["noMember", "father", "mother", "pingu", "pinga", "grandfather"]  // possible correct answers // noMember bumps index to 1 !
+var guessfamily = [];                                               // user input of correct answers and counter
 
-var i;
-for (i in family) {
-    if (i === userResponse.toLowerCase()) {
+var userResponse = prompt("Name as many of Pingu's family members as you can, separated by a comma:");
+console.log('userResponse: ' + userResponse);
+var userResponse = userResponse.split(", ");                        // turns userResponse into an Array
 
+for (var i = 0; i < userResponse.length; i++) {                    // loops through userResponse-Array
+
+    if (typeof userResponse[i] === 'string' && family.indexOf(userResponse[i].toLowerCase()) && guessfamily.length < 6) {                         // 1) validates that user input is a string  2) checks if it is in family-Array  3) checks amount of correct answers
+        guessfamily.push(userResponse[i]);
     }
-}
+    } else if (userResponse !== 'string') {                         // error msg if input is not a string
+        console.log('---- user input NOT A STRING ----');
+        alert()
+    } else {
 
+    };
+};   // close for-loop
 
 
 };   // window.onload function (above) closing brackets
