@@ -1,8 +1,8 @@
 // Codefellows-201 March 2016
 // JMaas Week1-day-3 Wednesday Lab Assignment:
+// JMaas Week1-day-4 Thursday Lab Assignment:
 
 // this function ensures that the html-page is fully loaded before the pop-up windows start:
-
 window.onload() = function() {
 
 // declare variables for textContent-functions below:
