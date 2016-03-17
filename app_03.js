@@ -133,22 +133,25 @@ if (guesses == 5;) {
 var family = ["noMember", "father", "mother", "pingu", "pinga", "grandfather"]  // possible correct answers // noMember bumps index to 1 !
 var guessfamily = [];                                               // user input of correct answers and counter
 
-var userResponse = prompt("Name as many of Pingu's family members as you can, separated by a comma:");
-console.log('userResponse: ' + userResponse);
-var userResponse = userResponse.split(", ");                        // turns userResponse into an Array
+while (keepAsking_05) {                                             // while-loop to reset question in case of input error
 
-for (var i = 0; i < userResponse.length; i++) {                    // loops through userResponse-Array
+    var userResponse = prompt("Name as many of Pingu's family members as you can, separated by a comma:");
+    console.log('userResponse: ' + userResponse);
+    var userResponse = userResponse.split(", ");                        // turns userResponse into an Array
 
-    if (typeof userResponse[i] === 'string' && family.indexOf(userResponse[i].toLowerCase()) && guessfamily.length < 6) {                         // 1) validates that user input is a string  2) checks if it is in family-Array  3) checks amount of correct answers
-        guessfamily.push(userResponse[i]);
-    }
-    } else if (userResponse !== 'string') {                         // error msg if input is not a string
-        console.log('---- user input NOT A STRING ----');
-        alert()
-    } else {
+    for (var i = 0; i < userResponse.length; i++) {                    // loops through userResponse-Array
 
-    };
-};   // close for-loop
+        if (typeof userResponse[i] === 'string' && family.indexOf(userResponse[i].toLowerCase()) && guessfamily.length < 6) {                         // 1) validates that user input is a string  2) checks if it is in family-Array  3) checks amount of correct answers
+            guessfamily.push(userResponse[i]);
+        }
+        } else if (userResponse !== 'string') {                         // error msg if input is not a string
+            console.log('---- user input NOT A STRING ----');
+            alert('Hey - NO NUMBERS - enter family members like "Mother" or "Pingu" only:')
+        } else {
+
+        };  // close if
+    };   // close for-loop
+};    // close while-loop
 
 
 };   // window.onload function (above) closing brackets
