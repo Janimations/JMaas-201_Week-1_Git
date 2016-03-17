@@ -1,8 +1,9 @@
 // Codefellows-201 March 2016
-// JMaas-Week1 Tuesday Lab Assignment:
+// JMaas Week1-day-3 Wednesday Lab Assignment:
 
 
-var userName = prompt('What is your name?');
+var userName = prompt('Welcome to the PINGU PROFILE page! Have a look around - when You are ready to take the Quiz enter Your name to          start:');
+
 console.log('The user said there name is ' + userName);
 
 alert('Hey there ' + userName + ', I\'m going to ask you some questions about me. Please click "ok", then answer Y or N to the next question.');
