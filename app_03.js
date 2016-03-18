@@ -111,9 +111,10 @@ while (keepAsking_04 = true && guess < 6) {
     var userResponse = prompt('Take a guess: How old is Pingu?');
     console.log('userResponse: ' + userResponse);
 
-    if (parseInt(userResponse) = 5) {
+    if (parseInt(userResponse) == 5) {
         alert('Well Done! You guessed right!');
         //question_4.textContent = 'Yes! Pingu is 5 years old.';
+        console.log('---- User guessed 5 ----');
         keepAsking_04 = false;
         guess = 6;
 
@@ -130,17 +131,18 @@ while (keepAsking_04 = true && guess < 6) {
 };
        // special message when out of guesses:
 
-if (guess = 5) {
+if (guess === 5) {
     alert('Sorry You are out of guesses! Next question:');
     //question_4.textContent = '???';
     console.log('---- No right answer after 5 guesses ----');
 };
 
-/*
+
 // Question 05:  // multiple correct answers from Array
 
-var family = ["noMember", "father", "mother", "pingu", "pinga", "grandfather"]  // possible correct answers // noMember bumps index to 1 !
+var family = ["noMember", "father", "mother", "pingu", "pinga", "grandfather"];  // possible correct answers // noMember bumps index to 1 !
 var guessfamily = [];                                               // user input of correct answers and counter
+var keepAsking_05 = true;
 
 while (keepAsking_05) {                                             // while-loop to reset question in case of input error
 
@@ -155,14 +157,13 @@ while (keepAsking_05) {                                             // while-loo
 
     for (var i = 0; i < userResponse.length; i++) {                    // loops through userResponse-Array
 
-        if (typeof userResponse[i] === 'string' && family.indexOf(userResponse[i].toLowerCase()) && guessfamily.length < 6) {                         // 1) validates that user input is a string  2) checks if it is in family-Array  3) checks amount of correct answers
+        if (typeof userResponse[i] === 'string' && family.indexOf(userResponse[i].toLowerCase()) > 0 && guessfamily.length < 6) {                         // 1) validates that user input is a string  2) checks if it is in family-Array  3) checks amount of correct answers
             guessfamily.push(userResponse[i]);
-        }
+            keepAsking_05 = false;
+
         } else if (userResponse !== 'string') {                         // error msg if input is not a string
             console.log('---- user input NOT A STRING ----');
             alert('Hey - NO NUMBERS - enter family members like "Mother" or "Pingu" only:');
-        } else {
-
         };  // close if
     };   // close for-loop
 };    // close while-loop
@@ -185,4 +186,3 @@ console.log('Total correct answers: ' + correctTotal + ' out of 5');
 
 
 //};   // window.onload function (above) closing brackets
-*/
