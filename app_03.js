@@ -96,8 +96,8 @@ while (keepAsking_03) {
         correctTotal ++;
 
     } else {
-    alert("Sorry, I didn't understand your answer. Please try again and only type 'Yes' or 'No':");
-    console.log("---- User Input error -----");
+        alert("Sorry, I didn't understand your answer. Please try again and only type 'Yes' or 'No':");
+        console.log("---- User Input error -----");
     };
 };
 
@@ -125,8 +125,9 @@ while (keepAsking_04 = true && guess < 6) {
         alert("No, that's too old. Try again:");
         guess += 1;
     } else {
-    alert("Sorry, I didn't understand your answer. Please try again and only type a number:");
-    console.log("---- User Input error -----");
+      alert("Sorry, I didn't understand your answer. Please try again and only type a number:");
+      console.log("---- User Input error -----");
+      guess += 1;
     };
 };
        // special message when out of guesses:
