@@ -107,7 +107,7 @@ while (keepAsking_03) {
 var keepAsking_04 = true;
 var guess = 1;
 
-while (keepAsking_04 = true && guess < 6) {
+while (keepAsking_04 == true && guess < 6) {
     var userResponse = prompt('Take a guess: How old is Pingu?');
     console.log('userResponse: ' + userResponse);
 
