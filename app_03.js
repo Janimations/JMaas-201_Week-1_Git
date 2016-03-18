@@ -42,7 +42,7 @@ while (keepAsking_01) {
 } else if (userResponse.toUpperCase() === 'P') {
     alert('Yes! Pingu was made using traditional Stop-Motion!');
     console.log("---- User guessed correctly ----");
-    //question_1.textContent = 'Yes! Pingu was made using traditional Stop-Motion!';
+    question_1.textContent = 'Yes! Pingu was made using traditional Stop-Motion!';
     keepAsking_01 = false;
     correctTotal ++;
 
@@ -62,13 +62,13 @@ while (keepAsking_02) {
 
   if (userResponse.toLowerCase() === 'n' || userResponse.toLowerCase() === 'no') {
     alert('YES! That is correct. Penguins are only found at the South-Pole.');
-    //question_2.textContent = 'YES! That is correct. Penguins are only found at the South-Pole.';
+    question_2.textContent = 'YES! That is correct. Penguins are only found at the South-Pole.';
     keepAsking_02 = false;
     correctTotal ++;
 
 } else if (userResponse.toUpperCase() === 'Y' ||         userResponse.toUpperCase() === 'YES') {
     alert('No! Penguins only live at the South-Pole!');
-    //question_2.textContent = 'No! Penguins only live at the South-Pole!';
+    question_2.textContent = 'No! Penguins only live at the South-Pole!';
     keepAsking_02 = false;
 
     } else {
@@ -87,17 +87,17 @@ while (keepAsking_03) {
 
     if (userResponse.toLowerCase() === 'n' || userResponse.toLowerCase() === 'no') {
         alert('WRONG! she really is his sister! ');
-        //question_3.textContent = 'WRONG! she really is his sister! ';
+        question_3.textContent = 'WRONG! she really is his sister! ';
         keepAsking_03 = false;
     } else if (userResponse.toUpperCase() === 'Y' || userResponse.toUpperCase() === 'YES') {
         alert('Yes ! That is Correct!');
-        //question_3.textContent = 'Yes ! That is Correct!';
+        question_3.textContent = 'Yes ! That is Correct!';
         keepAsking_03 = false;
         correctTotal ++;
 
     } else {
-    alert("Sorry, I didn't understand your answer. Please try again and only type 'Yes' or 'No':");
-    console.log("---- User Input error -----");
+        alert("Sorry, I didn't understand your answer. Please try again and only type 'Yes' or 'No':");
+        console.log("---- User Input error -----");
     };
 };
 
@@ -113,7 +113,7 @@ while (keepAsking_04 = true && guess < 6) {
 
     if (parseInt(userResponse) == 5) {
         alert('Well Done! You guessed right!');
-        //question_4.textContent = 'Yes! Pingu is 5 years old.';
+        question_4.textContent = 'Yes! Pingu is 5 years old.';
         console.log('---- User guessed 5 ----');
         keepAsking_04 = false;
         guess = 6;
@@ -125,15 +125,16 @@ while (keepAsking_04 = true && guess < 6) {
         alert("No, that's too old. Try again:");
         guess += 1;
     } else {
-    alert("Sorry, I didn't understand your answer. Please try again and only type a number:");
-    console.log("---- User Input error -----");
+      alert("Sorry, I didn't understand your answer. Please try again and only type a number:");
+      console.log("---- User Input error -----");
+      guess += 1;
     };
 };
        // special message when out of guesses:
 
 if (guess === 5) {
     alert('Sorry You are out of guesses! Next question:');
-    //question_4.textContent = '???';
+    question_4.textContent = '???';
     console.log('---- No right answer after 5 guesses ----');
 };
 
@@ -170,11 +171,11 @@ while (keepAsking_05) {                                             // while-loo
 
 if (guessfamily.length > 4) {                                // checks amount of correct answers and if guessed all prints special msg.
     alert("Awesome! You guessed all of Pingu's family members!!!" + guessfamily);
-    //question_5.textContent = "Awesome! You guessed all of Pingu's family members!!!" + guessfamily;   // Improve: printing the guessfamily-Array nicely...
+    question_5.textContent = "Awesome! You guessed all of Pingu's family members!!!" + guessfamily;   // Improve: printing the guessfamily-Array nicely...
     console.log('---- user guessed ALL ----');
 } else {
     alert("You guessed " + guessfamily.length + " of Pingu's family members correctly. - " + guessfamily);
-    //question_5.textContent = "You guessed " + guessfamily.length + " of Pingu's family members correctly." + guessfamily;
+    question_5.textContent = "You guessed " + guessfamily.length + " of Pingu's family members correctly." + guessfamily;
     console.log('---- guessed ' + guessfamily.length + ' answers correctly ----');
 };
 
