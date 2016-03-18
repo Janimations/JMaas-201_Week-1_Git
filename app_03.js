@@ -173,7 +173,7 @@ if (guessfamily.length > 4) {                                // checks amount of
     //question_5.textContent = "Awesome! You guessed all of Pingu's family members!!!" + guessfamily;   // Improve: printing the guessfamily-Array nicely...
     console.log('---- user guessed ALL ----');
 } else {
-    alert("You guessed " + guessfamily.length + " of Pingu's family members correctly." + guessfamily);
+    alert("You guessed " + guessfamily.length + " of Pingu's family members correctly. - " + guessfamily);
     //question_5.textContent = "You guessed " + guessfamily.length + " of Pingu's family members correctly." + guessfamily;
     console.log('---- guessed ' + guessfamily.length + ' answers correctly ----');
 };
