@@ -36,7 +36,7 @@ while (keepAsking_01) {
 
   if (userResponse.toLowerCase() === 'c') {
     alert('No, sorry, all the puppets and sets in Pingu are handmade!');
-    //question_1.textContent = 'No, sorry, all the puppets and sets in Pingu are handmade!';
+    question_1.textContent = 'No, sorry, all the puppets and sets in Pingu are handmade!';
     keepAsking_01 = false;
 
 } else if (userResponse.toUpperCase() === 'P') {
