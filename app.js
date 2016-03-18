@@ -20,7 +20,7 @@ var _06_register   = document.getElementById('_06_register');
 //01 Where - Route:
 var climbingRoute = prompt('Which Mountain are you planning to climb? Mt.StHellens, Mt.Hood or Mt.Rainier?');
 console.log('Sweet! You are going to climb ' + climbingRoute + '!  Good choice.');
-_01_route.textContent = 'Sweet! You are going to climbing' + climbingRoute + '! Good choice.';
+_01_route.textContent = 'Sweet! You are going to climb ' + climbingRoute + '! Good choice.';
 
                         // add more text and options that differentiate between StHellens, Hood and Rainer
 
