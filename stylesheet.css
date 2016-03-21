@@ -14,5 +14,9 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.3em;
+}
 
+#gameLink {
+    border-width: 2px;
+    border-color: black;
 }
